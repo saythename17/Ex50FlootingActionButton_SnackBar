@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
+<!--    뷰들이겹치지 않음(토스트조차도 밀리지 않고 캔슬되고 새로나옴)-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_margin="20dp"
+        android:layout_gravity="end|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="auto"
+        android:src="@android:drawable/ic_input_add"
+        app:rippleColor="#D8A406"
+        android:backgroundTint="#FFDF80"
+        android:onClick="clickFAB"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Show SnackBar"
+        android:onClick="clickBtn"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layout_snackbar_container"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="80dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
